@@ -40,11 +40,13 @@ export default {
   },
   methods:{
       submitInfo(){
+          
           this.firstVisit= false
           this.$root.$data.addedName=this.addedName
-          this.$root.$data.addedName=this.bio
+          this.$root.$data.bio=this.bio
           this.$root.$data.firstVisit = false
-          this.$root.$data.friends.push({"id":-100,"name":this.addedName,"bio":this.bio,"avg_score":0})
+          this.$root.$data.friends[this.$root.$data.friends.length -1 ].name = this.addedName
+          this.$root.$data.friends[this.$root.$data.friends.length -1 ].bio = this.bio
           this.doneEdit = true
       },
       
