@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
+  <div class="editinfo">
     
     
     
-    <div v-if="firstVisit">
-        <h1> Welcome! Let's get started! </h1>
+
+        <h1> You can edit your info here:</h1>
         <form v-on:submit.prevent="submitInfo">
                     <input v-model="addedName" placeholder="Name">
                     <br>
@@ -12,18 +12,15 @@
                     <br/>
                     <button type="submit"> Submit</button>
                 </form>
-    </div>
-    <div v-else>
-        <h1> Welcome, {{addedName}}! Get ready to take the quiz! Remember, you can change your info any time at this <router-link to="/editinfo">link.</router-link> </h1>
         <br>
-    <router-link to="/q1"><h1>Start the Quiz!</h1></router-link>
+        <br>
+        <div v-if="doneEdit">
+            Great, thanks! <router-link to="/">Back to Home</router-link>
+        </div>
 
     <br>
     <br>
     <br>
-
-    <h2> Or take a look at our <router-link to="/leaderboard">LEADERBOARD</router-link> where you can add and delete friends and challenge each other! </h2>
-    </div>
   </div>
 </template>
 
@@ -31,23 +28,24 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Home',
+  name: 'EditInfo',
   components: {
   },
   data(){
       return {
           addedName:this.$root.$data.addedName,
           bio:this.$root.$data.bio,
-          firstVisit: this.$root.$data.firstVisit
+          doneEdit:false
       }
   },
   methods:{
       submitInfo(){
           this.firstVisit= false
           this.$root.$data.addedName=this.addedName
-          this.$root.$data.bio=this.bio
+          this.$root.$data.addedName=this.bio
           this.$root.$data.firstVisit = false
           this.$root.$data.friends.push({"id":-100,"name":this.addedName,"bio":this.bio,"avg_score":0})
+          this.doneEdit = true
       },
       
   }

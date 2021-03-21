@@ -1,10 +1,14 @@
 <template>
   <div id="app">
+      <router-link to="/">
+        <img class="logo" src="/logo.png">
+      </router-link>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link> 
     </div>
     <router-view/>
+
+    <footer> Github Repo:</footer>
   </div>
 </template>
 
@@ -23,10 +27,14 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: rgb(144, 10, 161);
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: rgb(144, 10, 161);
+}
+
+.logo{
+    height:200px;
 }
 </style>
