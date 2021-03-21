@@ -31,6 +31,10 @@
             <router-link to="/q5">Next Question</router-link>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
 </template>
 

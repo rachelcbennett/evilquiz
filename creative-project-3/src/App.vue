@@ -37,4 +37,12 @@
 .logo{
     height:200px;
 }
+
+footer{
+    position:fixed;
+    bottom:0;    
+    background-color: rgb(211, 177, 214);
+    text-align:center;
+    width:100%;
+}
 </style>
