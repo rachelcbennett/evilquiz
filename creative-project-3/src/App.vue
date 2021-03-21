@@ -8,7 +8,7 @@
     </div>
     <router-view/>
 
-    <footer> Github Repo:</footer>
+    <footer> <a href= 'https://github.com/rachelcbennett/evilquiz'> Github Repo </a></footer>
   </div>
 </template>
 
