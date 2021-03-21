@@ -23,7 +23,11 @@
     <br>
 
     <h2> Or take a look at our <router-link to="/leaderboard">LEADERBOARD</router-link> where you can add and delete friends and challenge each other! </h2>
+
+    <br>
+    <br>
     </div>
+    <br>
   </div>
 </template>
 

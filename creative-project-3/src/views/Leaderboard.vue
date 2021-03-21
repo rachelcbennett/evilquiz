@@ -6,6 +6,9 @@
     <h1> Want more friends? You can add them <router-link to="/newfriends">here!</router-link></h1>
     
     <FriendList :friends="friends"  />
+    <br>
+    <br>
+    <br>
   
   </div>
 
